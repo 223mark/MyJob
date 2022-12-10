@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.pd-sm {
+    padding: 10px 0;
+}
+
+.pd-lg {
+    padding: 20px 0;
+}
+
+.job-button {
+    padding: 3px 10px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.job-button:hover {
+    background-color: rgb(139, 129, 129);
+    color: white;
+    border-radius: 0;
+}
+
+.job-button2 {
+    padding: 3px 10px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.job-button2:hover {
+    background-color: orange;
+    color: #fff;
+    border-radius: 0;
+}
+
+
+/*  hero*/
+
+
+/*
+#hero {
+    background-image: url('../img/header-bg-3.png');
+    height: 50vh;
+    background-size: cover;
+    background-position: top 50% right 0;
+}
+
+#hero .hero-box {
+    padding: 100px;
+    text-align: center;
+    font-size: 35px;
+} */
+
+
+/* hero end */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* job  */
+
+#job-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#job-section .job-box {
+    width: 45%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    transition: 0.4s;
+    background-color: rgb(218, 223, 228);
+}
+
+#job-section .job-box:hover {
+    box-shadow: 5px 5px 10px 5px rgb(139, 129, 129);
+    border-radius: 0;
+}
+
+
+/* Seemore job section */
+
+
+/* job end */

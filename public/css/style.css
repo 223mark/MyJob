@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white-: #fff;
+    --theme-col: green;
+}
+
+.section-pd {
+    padding: 20px 100px;
+}
+
+.active {
+    text-decoration: underline;
+    color: orange;
+}
+
+.text-pd-lg {
+    padding: 20px 0;
+}
+
+.text-mg-lg {
+    padding: 200px 0;
+}
+
+.d-inline-b {
+    display: inline-block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.fs-sm {
+    font-size: 13px;
+}
+
+.fs-md {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.fs-lg {
+    font-size: 28px;
+}
+
+.fs-xl {
+    font-size: 35px;
+}
+
+.main-btn {
+    background-color: orange;
+    opacity: 0.7;
+    color: var(--white-);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.main-btn:hover {
+    opacity: 1;
+}
+
+body {
+    width: 100%;
+}
+
+
+/* header */
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 100px;
+    background-color: var(--white-);
+    box-shadow: 8px 5px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#header .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .nav-bar a {
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+#header .nav-bar a:hover {
+    color: orange;
+}
+
+
+/* header end */
+
+
+/* job section blade */
+
+.job-box:hover {
+    border: 2px solid black;
+}
+
+
+/* hero */
+
+#hero {
+    background-image: url('../img/header-bg-1.png');
+    width: 100%;
+    height: 26vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 70% right 0;
+    color: var(--white-);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#background {
+    background-image: url('../img/jbscv.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* hero end */
+
+
+/* search tag */
+
+.search-tag {
+    background-color: orange;
+    border-radius: 30px;
+    padding: 5px 15px;
+    color: white;
+}
+
+
+/* search tag end */
+
+
+/* add */
+
+.search-section input {
+    width: 50%;
+    transition: 0.3s linear;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.search-section input:hover {
+    border: 2px solid orange;
+}
+
+
+/* top employee
+
+#top-employee {
+    width: 100%;
+}
+
+.employee {
+    width: 20%;
+}
+
+.employee-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-employee .employee img {
+    width: 95%;
+    height: 22vh;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+} */
+
+
+/* top employee end */
+
+
+/* review */
+
+
+/*
+.review-text {
+    display: flex;
+    width: 40%;
+    transition: 0.4s;
+    padding: 10px;
+}
+
+.review-text:hover {
+    border-bottom: 2px solid orange;
+}
+
+.review-text .pf-pt {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.review-text p {
+    padding: 10px;
+    background-color: var(--white-);
+}
+
+
+review */
+
+
+/* footer */
+
+#footer {
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 50% right 0;
+    color: var(--white-);
+    height: 45vh;
+    padding: 0px;
+}
+
+.footer-box p {
+    padding: 5px 0;
+}
+
+
+/* footer end */
