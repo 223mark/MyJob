@@ -112,8 +112,8 @@ class UserController extends Controller
     public function alertMessagePage()
     {
         $messageData = jobapplyData::select('jobapply_data.*', 'list_of_jobs.*', 'jobapply_data.status as apply_status')
-            ->leftJoin('list_of_jobs', 'jobapply_data.company_id', 'list_of_jobs.company_id')
-            ->where('user_id', Auth()->user()->id)
+            ->leftJoin('list_of_jobs', 'jobapply_data.job_id', 'list_of_jobs.id')
+            ->where('jobapply_data.user_id', Auth()->user()->id)
             ->paginate(5);
         return view('user.UserSection.jobalertmessage')->with(['messageData' => $messageData]);
     }

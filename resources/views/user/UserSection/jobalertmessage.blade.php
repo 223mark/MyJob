@@ -3,7 +3,7 @@
     <div class=" d-flex justify-content-end" style="padding: 20px 100px">
         <a href="{{ route('user#info', Auth()->user()->id) }}">
             <button class="btn btn-sm btn-primary">
-                Back
+                Back <h1>{{ $messageData->total() }}</h1>
             </button>
         </a>
     </div>
@@ -14,6 +14,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+
         <table class="table table-hover border-5 text-dark">
 
             <th>
@@ -64,8 +65,6 @@
                         </td>
                     </tr>
                 @endforeach
-
-
             </tbody>
 
         </table>
