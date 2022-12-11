@@ -21,6 +21,11 @@
                 </tr>
             </th>
             <tbody>
+                @if (count($userData) == 0)
+                    <tr class="text-center">
+                        <td colspan="7">There is no <span class="text-danger">Data</span></td>
+                    </tr>
+                @endif
                 @foreach ($userData as $item)
                     <tr>
                         <td>{{ $item->job_title }}</td>
@@ -30,8 +35,10 @@
                         <td class="">{{ $item->location }}</td>
                         <td> {{ $item->description }}</td>
                         <th>
-                            <a href="{{ route('admin#deletempJob', $item->id) }}"></a>
-                            <button class="btn btn-sm btn-danger">Delete</button>
+                            <a href="{{ route('admin#deletempJob', $item->id) }}">
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </a>
+
                         </th>
                     </tr>
             </tbody>

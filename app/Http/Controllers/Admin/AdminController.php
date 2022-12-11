@@ -110,6 +110,12 @@ class AdminController extends Controller
         $data = User::where('role', 'user')->paginate(5);
         return view('admin.userlist')->with(['userData' => $data]);
     }
+    //account delete
+    public function deleteAccount($id)
+    {
+        User::where('id', $id)->delete();
+        return back();
+    }
     //blog
     // public function blogPage()
     // {

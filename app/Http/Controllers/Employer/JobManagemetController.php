@@ -73,11 +73,6 @@ class JobManagemetController extends Controller
         $jobdata = ListOfJobs::paginate(5);
         return redirect()->route('employer#jobList')->with(['jobMessage' => 'job created..', 'jobdata' => $jobdata]);
     }
-    //employee detail
-    public function employeeDetail($id)
-    {
-        return view('employer.employeedetail');
-    }
     //edit and update
     public function edit($id)
     {
@@ -129,7 +124,13 @@ class JobManagemetController extends Controller
 
         ];
         jobapplyData::where('id', $id)->update($data);
-        return back()->with(['respondMessage' => 'Job Accepted....']);
+        if ($request->status == 'Accept') {
+            $message = 'Job Accepted..';
+        };
+        if ($request->status == 'Decline') {
+            $message = 'Job Declined..';
+        };
+        return redirect()->route('employer#jalerts')->with(['respondMessage' => $message]);
         //return redirect()->route('employer#jalerts')->with(['respondMessage' => 'Job Responded....']);
     }
     public  function jrespondDetail($id)

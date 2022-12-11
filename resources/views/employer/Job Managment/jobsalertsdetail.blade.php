@@ -42,11 +42,11 @@
                             </div>
                             <div class="">
                                 <label for="" class=" mb-2" class="">Respond</label>
-                                <select name="respond" class=" form-control bold">
+                                <select name="status" class=" form-control bold">
                                     <option value="">Choose</option>
                                     <option value="Accept">Accept</option>
                                     <option value="Decline">Decline</option>
-                                    @error('respond')
+                                    @error('status')
                                         <div class="text-danger mt-1">
                                             {{ $message }}
                                         </div>

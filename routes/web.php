@@ -56,6 +56,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin_auth'], function () {
     //employerjoblist
     Route::get('employer/job/list/{id}', [AdminController::class, 'employerJobList'])->name('admin#empoyerJoblist');
     Route::get('employer/job/delete/{id}', [AdminController::class, 'deleteEmployerJob'])->name('admin#deletempJob');
+    //account delete
+    Route::get('account/delete/{id}', [AdminController::class, 'deleteAccount'])->name('admin#deleteAccount');
 });
 
 //UNMIDDLEWARE ROUTES TO GET USER INFORMATION
@@ -114,9 +116,6 @@ Route::group(['prefix' => 'employer/', 'middleware' => 'employer_auth'], functio
         Route::post('jobsearch', [JobManagemetController::class, 'jobalertSearch'])->name('employer#jobalsearch');
         // END JOB MANAGMENT
     });
-
-
-
 
     //articles
     // Route::get('articles', [Employer::class, 'articles'])->name('employer#aritcles');

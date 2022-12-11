@@ -29,7 +29,7 @@
                             </a>
                         </td>
                         <td>
-                            <a href="">
+                            <a href=""{{ route('admin#deleteAccount', $item->id) }}"">
                                 <button class="btn btn-sm btn-danger">X</button>
                             </a>
                         </td>
