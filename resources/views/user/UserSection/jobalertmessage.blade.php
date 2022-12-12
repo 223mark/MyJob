@@ -3,7 +3,7 @@
     <div class=" d-flex justify-content-end" style="padding: 20px 100px">
         <a href="{{ route('user#info', Auth()->user()->id) }}">
             <button class="btn btn-sm btn-primary">
-                Back <h1>{{ $messageData->total() }}</h1>
+                Back
             </button>
         </a>
     </div>
@@ -16,7 +16,6 @@
         @endif
 
         <table class="table table-hover border-5 text-dark">
-
             <th>
                 <tr>
                     <th>User Name</th>

@@ -12,12 +12,14 @@ class UserSearchController extends Controller
     public function filterJob($type)
     {
         $jobdata = ListOfJobs::where('description', $type)->paginate(6);
-        return view('user.searchcategory.filtersearch', compact('jobdata'));
+        $searchText = $type;
+        return view('user.searchcategory.filtersearch', compact('jobdata', 'searchText'));
     }
     public function filterJobType($jobType)
     {
         $jobdata = ListOfJobs::where('typeOfJob', $jobType)->paginate(6);
-        return view('user.searchcategory.filtersearch', compact('jobdata'));
+        $searchText = $jobType;
+        return view('user.searchcategory.filtersearch', compact('jobdata', 'searchText'));
     }
 
     //end serch category end

@@ -156,13 +156,9 @@ class JobManagemetController extends Controller
             ->orwhere('email', 'like', '%' . $request->searchJob . '%')
             ->orwhere('typeOfJob', 'like', '%' . $request->searchJob . '%')
             ->paginate(5);
-        if (count($searchData) == 0) {
-            $emptyStatus = 0;
-        } else {
-            $emptyStatus = 1;
-        }
+
         $searchData->appends($request->all()); // fixed search
-        return view('employer.Job Managment.jobs')->with(['jobdata' => $searchData, 'dataStatus' => $emptyStatus]);
+        return view('employer.Job Managment.jobs')->with(['jobdata' => $searchData]);
     }
     //END JOB MANAGMENT
     // PRIVATE

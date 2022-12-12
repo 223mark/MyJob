@@ -81,13 +81,9 @@ class JobSectionController extends Controller
             ->orwhere('email', 'like', '%' . $request->searchJob . '%')
             ->orwhere('typeOfJob', 'like', '%' . $request->searchJob . '%')
             ->paginate(5);
-        if (count($searchData) == 0) {
-            $emptyStatus = 0;
-        } else {
-            $emptyStatus = 1;
-        }
+        $searchText = $request->searchJob;
         //Session::put('JOB_SEARCH', $request->searchJob);
         $searchData->appends($request->all());
-        return view('user.jobs.jobsalerts')->with(['jobdata' => $searchData, 'dataStatus' => $emptyStatus]);
+        return view('user.jobs.jobsalerts')->with(['jobdata' => $searchData, 'searchText' => $searchText]);
     }
 }

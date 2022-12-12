@@ -6,7 +6,14 @@
         <div class="search-section" style="margin-top: 20px">
             <form action="{{ route('user#jobsearch') }}" method="POST" class=" d-flex justify-content-center">
                 @csrf
-                <input type="text" class="form-control w-50 d-inline-block" name="searchJob" placeholder="Search Your Job">
+                @if (!empty($searchText))
+                    <input type="text" class="form-control w-50 d-inline-block" name="searchJob"
+                        placeholder="Search Your Job" value="{{ old('searchJob', $searchText) }}">
+                @endif
+                @if (empty($searchText))
+                    <input type="text" class="form-control w-50 d-inline-block" name="searchJob"
+                        placeholder="Search Your Job">
+                @endif
                 <button type="submit" class="btn btn-sm btn-primary"> Search <i
                         class="fa-solid fa-magnifying-glass "></i></button>
             </form>

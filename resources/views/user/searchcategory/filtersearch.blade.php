@@ -4,7 +4,7 @@
 @section('content')
     <section id="hero" class="mb-5">
         <div class="search-section" style="margin-top: 20px">
-            <form action="{{ route('user#jobsearch') }}" method="POST" class=" d-flex justify-content-center">
+            <form action="{{ route('user#jobsearch') }}" method="POST" class="d-flex justify-content-center">
                 @csrf
                 <input type="text" class="form-control w-50 d-inline-block" name="searchJob" placeholder="Search Your Job">
                 <button type="submit" class="btn btn-sm btn-primary"> Search <i
@@ -14,11 +14,17 @@
     </section>
     {{-- user search job --}}
     <div class="container mb-2">
-        <div class=" row ">
+        <div class="d-flex justify-content-between">
             <a href="{{ route('user#jobalerts') }}">
                 # Back
             </a>
+            <h6>
+                # <span class="text-danger mx-2">{{ $searchText }}</span> <span>Jobs</span>
+            </h6>
         </div>
+
+
+    </div>
     </div>
     {{-- search job end --}}
     <div class="container mt-4">
