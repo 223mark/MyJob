@@ -6,8 +6,17 @@
         <div class="search-section" style="margin-top: 20px">
             <form action="{{ route('employer#search') }}" method="POST">
                 @csrf
-                <input type="text" class="input-bar w-50" name="searchJob" placeholder="Search Your Job">
-                <button type="submit" class="btn btn-warning"> Search <i class="fa-solid fa-magnifying-glass "></i></button>
+
+                @if (empty($searchText))
+                    <input type="text" class="input-bar w-50" name="searchJob" placeholder="Search Your Job">
+                @endif
+                @if (!empty($searchText))
+                    <input type="text" class="input-bar w-50" name="searchJob" placeholder="Search Your Job"
+                        value="{{ old('searchJob', $searchText) }}">
+                @endif
+
+                <button type="submit" class="btn btn-warning"> Search <i
+                        class="fa-solid fa-magnifying-glass "></i></button>
             </form>
 
         </div>

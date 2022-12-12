@@ -56,10 +56,10 @@
                         {{ $jobdata->typeOfJob }}
                     </div>
                     <div class="col-md-4">
-                        <span>Updated Date</span>
+                        <span>Salary</span>
                     </div>
                     <div class="col-md-6">
-                        {{ $jobdata->updated_at }}
+                        {{ $jobdata->salary }}
                     </div>
                 </div>
 

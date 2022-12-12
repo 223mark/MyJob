@@ -51,7 +51,7 @@
     <!-- header end -->
     @yield('content')
     <!-- footer -->
-    <footer id="footer" class=" d-flex justify-content-around py-5 px-10 mt-4">
+    <footer id="footer" class=" d-flex justify-content-around py-5 px-10 mt-5">
         <div class="form-group" style="width:400px">
             <label for="email" class=" w-100">
                 <h4 class="text-warning pb-3">Get Newsletter</h4>

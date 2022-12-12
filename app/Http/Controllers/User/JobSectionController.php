@@ -66,9 +66,10 @@ class JobSectionController extends Controller
     public function employerSearch(Request $request)
     {
         $searchData = User::where('role', 'employer')
-            ->where('name', 'like', '%' . $request->searchJob . '%')
+            ->where('name', 'like', '%' . $request->searchEmployer . '%')
             ->paginate(5);
-        return view('user.Employer.employerlist')->with(['userData' => $searchData]);
+        $searchText = $request->searchEmployer;
+        return view('user.Employer.employerlist')->with(['userData' => $searchData, 'searchText' => $searchText]);
     }
     //job search
     public function jobsearch(Request $request)

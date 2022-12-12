@@ -6,8 +6,15 @@
         <div class="search-section" style="margin-top: 20px">
             <form action="{{ route('user#employerSearch') }}" method="POST">
                 @csrf
-                <input type="text" class="input-bar w-50" name="searchJob" placeholder="Search Company">
-                <button type="submit" class="btn btn-primary"> Search <i class="fa-solid fa-magnifying-glass "></i></button>
+                @if (empty($searchText))
+                    <input type="text" class="input-bar w-50" name="searchEmployer" placeholder="Search Company">
+                @endif
+                @if (!empty($searchText))
+                    <input type="text" class="input-bar w-50" name="searchEmployer" placeholder="Search Company"
+                        value="{{ old('searchEmployer', $searchText) }}">
+                @endif
+                <button type="submit" class="btn btn-primary"> Search <i
+                        class="fa-solid fa-magnifying-glass "></i></button>
             </form>
 
         </div>
@@ -16,6 +23,11 @@
     <!-- job  -->
     <div class="container mt-5">
         <div class="row">
+            @if (count($userData) == 0)
+                <div class=" my-5 text-center">
+                    <h3>There is no <span class="text-danger mx-2">Company</span></h3>
+                </div>
+            @endif
             @foreach ($userData as $item)
                 <div class="col-md-4">
                     <div class="card" style="height:350px;background-color: rgba(245, 233, 233, 0.747)">
